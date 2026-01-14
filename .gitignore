@@ -33,9 +33,3 @@ Thumbs.db
 *_history.txt
 *_history_*.json
 *_history_*.txt
-
-# Blog drafts and documentation
-*_DRAFT.*
-*_POST_*.*
-blog_*.*
-draft_*.*
