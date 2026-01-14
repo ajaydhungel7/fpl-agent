@@ -1,6 +1,23 @@
 # FPL Assistant - AI-Powered Fantasy Premier League Advisor
 
-An intelligent FPL assistant built with the Strands Agents SDK that helps you make data-driven decisions for your Fantasy Premier League team.
+[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![Strands](https://img.shields.io/badge/Strands-Framework-orange.svg)](https://strands.dev)
+[![AWS Bedrock](https://img.shields.io/badge/AWS-Bedrock-orange.svg)](https://aws.amazon.com/bedrock/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+An intelligent FPL assistant built with the **[Strands Framework](https://strands.dev)** that helps you make data-driven decisions for your Fantasy Premier League team.
+
+> **Note:** This is a learning project built to explore AI agent development with the Strands Framework. Read the accompanying [blog post](#) to learn how this was built and why you should build your own learning projects!
+
+## 🎯 About This Project
+
+This project demonstrates how to build production-ready AI agents using:
+- **Strands Framework** - Python framework for building AI agents with custom tools
+- **FPL API** - Fantasy Premier League's free, public API
+- **AWS Bedrock (Claude Sonnet)** - LLM provider (supports others too!)
+- **17 Custom Tools** - Specialized functions for player analysis, transfers, and strategy
+
+**This is an educational project.** While it provides FPL analysis, the primary goal is to showcase how to build intelligent agents that can work with real-world APIs. The same patterns can be applied to any domain (stocks, weather, sports, etc.).
 
 ## Features
 
@@ -11,9 +28,13 @@ An intelligent FPL assistant built with the Strands Agents SDK that helps you ma
 - **Differential Finder**: Discover low-owned players with high potential
 - **Price Change Tracking**: Monitor player price rises and falls
 
-## Installation
+## 🚀 Quick Start
 
-1. **Clone or download this directory**
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/ajaydhungel7/fpl-agent.git
+   cd fpl-agent
+   ```
 
 2. **Create a virtual environment**:
    ```bash
@@ -245,10 +266,48 @@ Feel free to add more tools or improve existing ones:
 
 MIT License - feel free to use and modify for your FPL needs!
 
-## Disclaimer
+## 📝 Blog Post: Building This Project
 
-This is an unofficial tool and is not affiliated with the Premier League or Fantasy Premier League. Use at your own discretion for entertainment and research purposes.
+I wrote a detailed blog post about building this FPL agent as a learning project. It covers:
+- Why I built this (spoiler: not to automate FPL decisions!)
+- How the Strands Framework works
+- The architecture and tool design
+- Lessons learned working with real-world APIs
+- Why you should build your own learning projects
+
+**Read the full article:** [Building a Fantasy Football AI Agent: A Journey in Learning Agent Development](#) *(Coming soon!)*
+
+## 🤝 Contributing
+
+This is a learning project, and contributions are welcome! Whether you're learning agent development or want to add FPL features:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+**Ideas for contributions:**
+- Add more tools (injury analysis, xG stats, etc.)
+- Support for other LLM providers
+- Improve fixture difficulty algorithms
+- Add unit tests
+- Better error handling
+
+## ⚠️ Important Disclaimers
+
+**On Using AI for FPL:**
+This tool is built for **educational purposes** to learn about AI agent development. While it provides FPL analysis, using AI to make all your FPL decisions defeats the purpose of the game. The fun of FPL is in the decision-making, the debates, and yes, even the mistakes. Use this as a learning tool, not an autopilot!
+
+**On the FPL API:**
+This is an unofficial tool and is not affiliated with the Premier League or Fantasy Premier League. The API is unofficial and may change without notice. Use at your own discretion for entertainment and research purposes.
+
+## 📧 Contact
+
+Ajay Dhungel - [@ajaydhungel7](https://github.com/ajaydhungel7)
+
+Project Link: [https://github.com/ajaydhungel7/fpl-agent](https://github.com/ajaydhungel7/fpl-agent)
 
 ---
 
-Good luck with your FPL season! 🏆⚽
+**Built with [Strands Framework](https://strands.dev)** | Good luck with your FPL season! 🏆⚽
