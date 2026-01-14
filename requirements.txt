@@ -1,0 +1,8 @@
+strands-agents>=0.1.0
+strands-agents-tools>=0.1.0
+requests>=2.31.0
+python-dotenv>=1.0.0
+
+# AWS Bedrock dependencies
+boto3>=1.34.0
+botocore>=1.34.0
