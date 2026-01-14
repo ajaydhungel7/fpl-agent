@@ -29,9 +29,13 @@ Thumbs.db
 *.log
 
 # Personal data - don't commit user data
-entry_history.json
-entry_history_summary.txt
+*_history.json
+*_history.txt
+*_history_*.json
+*_history_*.txt
 
 # Blog drafts and documentation
-MEDIUM_POST_DRAFT.md
-MEDIUM_POST_GOOGLEDOCS.txt
+*_DRAFT.*
+*_POST_*.*
+blog_*.*
+draft_*.*
