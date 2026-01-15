@@ -1,0 +1,38 @@
+# AgentCore Configuration for FPL Assistant
+name: fpl-assistant
+description: Fantasy Premier League AI assistant with player analysis and team management
+
+# Runtime configuration
+runtime:
+  memory: 1024  # MB - enough for Strands agent + dependencies
+  timeout: 120  # seconds - generous for API calls + LLM inference
+  environment:
+    MODEL: anthropic.claude-3-5-sonnet-20241022-v2:0
+
+# Memory configuration (AgentCore's built-in memory service)
+memory:
+  enabled: true
+
+  # Short-term memory: Conversation history within a session
+  short_term:
+    max_messages: 20  # Keep last 20 messages in conversation
+    ttl_hours: 24     # Clear after 24 hours of inactivity
+
+  # Long-term memory: Persistent data across sessions
+  long_term:
+    enabled: true
+    retention_days: 90  # Keep user preferences for 90 days
+
+# Observability
+observability:
+  tracing: true     # Enable distributed tracing
+  logs: true        # Enable CloudWatch logs
+  metrics: true     # Enable CloudWatch metrics
+
+# Gateway (optional - for exposing tools as APIs)
+gateway:
+  enabled: false  # Not needed for now since Strands agent has tools built-in
+
+# Authentication (optional)
+auth:
+  enabled: false  # Set to true for production with user authentication

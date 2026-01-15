@@ -106,6 +106,7 @@ See **[LLM_SETUP.md](LLM_SETUP.md)** for OpenAI, Google Gemini, and Ollama (loca
 Run the assistant in interactive mode:
 
 ```bash
+cd agentcore/fpl-agentcore/src
 python agent.py
 ```
 
@@ -209,17 +210,36 @@ The agent understands your natural language queries, determines which tools to u
 
 ```
 fpl-assistant/
-├── agent.py              # Main agent script
-├── fpl_client.py         # FPL API client
-├── requirements.txt      # Python dependencies
-├── .env                  # Configuration (not committed)
-├── .env.example          # Example configuration
-└── tools/
-    ├── player_analysis.py   # Player research tools
-    ├── transfer_tools.py    # Transfer recommendation tools
-    ├── team_tools.py        # Team analysis tools
-    └── captain_tools.py     # Captain selection tools
+├── requirements.txt           # Python dependencies
+├── .env                       # Configuration (not committed)
+├── .env.example               # Example configuration
+├── api_tests/                 # API testing scripts
+└── agentcore/                 # AWS Bedrock AgentCore deployment
+    └── fpl-agentcore/         # Pre-configured agent project
+        ├── pyproject.toml     # Agent dependencies
+        └── src/
+            ├── agent.py              # Main agent script (run locally)
+            ├── main.py               # AgentCore wrapper (for AWS)
+            ├── fpl_client.py         # FPL API client
+            └── tools/
+                ├── player_analysis.py   # Player research tools
+                ├── transfer_tools.py    # Transfer recommendation tools
+                ├── team_tools.py        # Team analysis tools
+                └── captain_tools.py     # Captain selection tools
 ```
+
+## Deployment
+
+### AWS Bedrock AgentCore
+
+Deploy this agent to AWS Bedrock AgentCore for production hosting with built-in memory, scaling, and observability:
+
+```bash
+cd agentcore
+# Follow instructions in agentcore/README.md
+```
+
+The `agentcore/fpl-agentcore/` folder is pre-configured and ready to deploy. See the [AgentCore README](agentcore/README.md) for detailed deployment instructions.
 
 ## Data Source
 
@@ -240,9 +260,9 @@ All data comes from the official Fantasy Premier League API:
 
 Feel free to add more tools or improve existing ones:
 
-1. Create new tools in the `tools/` directory
+1. Create new tools in the `agentcore/fpl-agentcore/src/tools/` directory
 2. Use the `@tool` decorator from `strands`
-3. Add the tool to the agent in `agent.py`
+3. Add the tool to the agent in `agentcore/fpl-agentcore/src/agent.py`
 4. Provide clear docstrings for the LLM to understand
 
 ## Troubleshooting

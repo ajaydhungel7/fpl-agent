@@ -1,0 +1,16 @@
+[project]
+name = "fpl-agentcore"
+version = "0.1.0"
+description = "FPL Assistant for AWS Bedrock AgentCore"
+requires-python = ">=3.11"
+dependencies = [
+    "bedrock-agentcore>=1.1.0",
+    "strands-agents>=0.1.0",
+    "strands-agents-tools>=0.1.0",
+    "requests>=2.31.0",
+    "python-dotenv>=1.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
